@@ -1,0 +1,17 @@
+image: ntwrkguru/pandoc-gitlab-ci
+
+stages:
+  - build
+
+build:
+  stage: build
+  script:
+     - cd Intro
+     - pandoc -s *.md *.html
+     - pandoc -s *.md *.pdf
+  artifacts:
+    paths:
+       - "*.html"
+       - "*.pdf"
+  tags:
+    - shared-default
