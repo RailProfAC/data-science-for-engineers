@@ -6,8 +6,8 @@ stages:
 build:
   stage: build
   script:
-     - pandoc -s Intro/*.md -o *.html
-     - pandoc -s Intro/*.md -o *.pdf
+     - pandoc -s Intro/Seminarinhalte.md -o Seminarinhalte.html
+     - pandoc -s Intro/Seminarinhalte.md -o Seminarinhalte.pdf
   artifacts:
     paths:
        - "*.html"
