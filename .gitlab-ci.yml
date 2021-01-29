@@ -9,7 +9,7 @@ build:
      - pandoc Contents/Seminarinhalte.md -o Seminarinhalte.html
      - pandoc -s Contents/Seminarinhalte.md -o Seminarinhalte.pdf
      - cd IntroDataScience
-     - pdflatex Slides-IntroDataScience.tex
+     - pdflatex Handout-IntroDataScience.tex
      - cd ..
   artifacts:
     paths:
