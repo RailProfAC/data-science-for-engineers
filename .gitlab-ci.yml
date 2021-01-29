@@ -8,7 +8,7 @@ build:
   script:
      - pandoc Contents/Seminarinhalte.md -o Seminarinhalte.html
      - pandoc -s Contents/Seminarinhalte.md -o Seminarinhalte.pdf
-     - pdflatex Handout-IntroDataScience.tex
+     - pdflatex IntroDataScience/Handout-IntroDataScience.tex
   artifacts:
     paths:
        - "*.html"
