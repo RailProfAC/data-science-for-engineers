@@ -9,6 +9,9 @@ build:
      - pandoc Contents/Seminarinhalte.md -o Seminarinhalte.html
      - pandoc -s Contents/Seminarinhalte.md -o Seminarinhalte.pdf
      - pdflatex IntroDataScience/Handout-IntroDataScience.tex
+     - pdflatex IntroDataScience/Slides-IntroDataScience.tex
+     - pdflatex IntroPythonJupyter/Handout-IntroPythonJupyter.tex
+     - pdflatex IntroPythonJupyter/Slides-IntroPythonJupyter.tex
   artifacts:
     paths:
        - "*.html"
