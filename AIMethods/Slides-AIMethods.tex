@@ -1,0 +1,174 @@
+\documentclass[slidestop,compress,mathserif, aspectratio = 169]{beamer}
+\usetheme[block = fill, numbering = none]{metropolis}
+\usepackage{etex}
+\useinnertheme{rectangles}
+\usepackage{graphicx}
+\usepackage{subfig}
+\usepackage{epigraph}
+\usepackage{makeidx}
+\usepackage[]{amsmath}
+\usepackage[]{amssymb}
+\usepackage{color}
+\usepackage{pict2e}
+\usepackage{algorithm2e}
+\usepackage[ngerman]{babel}
+\usepackage{tikz}
+\usetikzlibrary{mindmap}
+\usepackage{multirow}
+\usepackage{ulem}
+\usepackage[utf8]{inputenc}
+\usepackage{multimedia}
+\usepackage{xcolor}
+\usepackage{keyval}
+\usepgfmodule{shapes}
+\usepackage{pgfplots}
+\usepackage{sansmath}
+\usepackage{pgfgantt}
+\usetikzlibrary{arrows}
+\usetikzlibrary{graphs, automata, spy, positioning}
+\usetikzlibrary{shapes.gates.logic.US,trees}
+\usepackage{colortbl}
+\usepackage{array}
+\usepackage{listings}
+\usepackage{pdfpages}
+\usepackage{textcomp}
+\pgfplotsset{width=6cm}
+
+
+%\definecolor{RYB1}{RGB}{240,249,232}
+%\definecolor{RYB2}{RGB}{186,228,188}
+%\definecolor{RYB3}{RGB}{123,204,196}
+%\definecolor{RYB4}{RGB}{67,162,202}
+%\definecolor{RYB5}{RGB}{18,104,172}
+%
+%\definecolor{blue}{rgb}{0,0,1}
+%\definecolor{mint}{cmyk}{75,0,40,0}
+%\definecolor{mint}{rgb}{32,178,170}
+\graphicspath{{./figures/}}
+
+\mode<handout>{
+\usepackage{pgfpages}
+\pgfpagesuselayout{2 on 1}[a4paper,border shrink=5mm]
+}
+
+\AtBeginSection{\frame{\sectionpage}}
+%\AtBeginSubsection{\frame{\subsectionpage}}
+\newtranslation[to=ngerman]{Section}{Teil}
+\newtranslation[to=ngerman]{Subsection}{Abschnitt}
+
+\setbeamersize{text margin left=.8cm, text margin right=.8cm}
+
+%\setbeamertemplate{frametitle}{%
+%    \nointerlineskip%
+%    \begin{beamercolorbox}[wd=\paperwidth,ht=2.0ex,dp=0.6ex]{frametitle}
+%        \hspace*{1ex}\insertframetitle%
+%    \end{beamercolorbox}%
+%}
+
+\newcommand\MyBox[2]{
+  \fbox{\lower0.75cm
+    \vbox to 1.7cm{\vfil
+      \hbox to 1.7cm{\hfil\parbox{1.4cm}{#1\\#2}\hfil}
+      \vfil}%
+  }%
+}
+
+\pgfmathdeclarefunction{norm}{3}{%
+                      \pgfmathparse{sqrt(0.5*#3/pi)*exp(-0.5*#3*(#1-#2)^2)}%
+                    }
+\begin{document}
+
+\setbeamertemplate{bibliography item}{\insertbiblabel}
+\tikzstyle{element} = [draw,rectangle, align = center, text width = 2.5 cm, node distance = 1.25 cm]
+
+% Formalia
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\mum}{\operatorname{\mu m}}
+\newcommand{\E}{\operatorname{E}}
+\newcommand{
+\offslide}[2]{
+\begin{frame}
+\frametitle{\includegraphics[scale=0.05] {Offwhite} \hspace{.5mm} #1}
+%\framesubtitle{#2}
+\begin{tikzpicture}[x=1cm, y=1cm, semitransparent]
+\draw[step=5mm, line width=0.2mm, black!40!white] (0,0) grid (\textwidth,\textheight-1cm);
+\node[anchor = south east] at (\textwidth,0) {#2};
+
+\end{tikzpicture}
+\end{frame}
+}
+\newcommand{\source}[1]{\rotatebox{90}{\tiny \color{gray} #1}}
+
+\newcommand{\lehrtext}[1]{
+\only<article>{
+\vspace{0.3cm}
+\leavevmode%
+  \tabto*{-1.8cm}% LEFT MARGIN
+  %\tabto*{\dimexpr\linewidth+40pt\relax}% RIGHT MARGIN
+  \smash{\belowbaseline[-\ht\strutbox]{\makebox[0pt]%
+%    [r]% LEFT MARGIN
+    [l]% RIGHT MARGIN
+  {\includegraphics[width = 1.5cm]{teacher}}}}%
+  \tabto*{\TabPrevPos}%
+#1
+}
+}
+
+\title{Rail Data Science}
+\subtitle{AI Methods}
+\author{Prof. Dr. Raphael Pfaff}
+\institute[FH Aachen]{Fachhochschule Aachen}
+\logo{\put(-18, 120){\includegraphics[width=1.4cm]{logoR}}}
+
+\begin{frame} % Cover slide
+\titlepage
+\end{frame}
+
+%Pr\"aliminarien
+%\input{introDataScience}
+%\input{parts/part2}
+\input{toolsMethodsDataScience}
+%
+%\section{Lebenszyklus und Zuverlässigkeitstechnik}
+%%%%Zuverl\"assigkeitstechnik
+%\input{parts/part8}
+%%
+%\section{Mechatronik}
+%%%%Elektrische Komponenten
+%\input{parts/part7}
+%%Software-Qualit\"at
+%\input{parts/part9}
+%%
+%\section{QM-Systeme}
+%%%%Requirements Engineering
+%\input{parts/part1a}
+%%%% QM-Systeme
+%\input{parts/part1b}
+%%%%QFD, FTA, FMEA
+%\section{Methoden des QM}
+%\input{parts/part1c}
+%%%%% Einf\"uhrung FMT
+
+
+%\frame[allowframebreaks]{\frametitle{Literature}
+%\framesubtitle{}
+%\nocite{pfeifer10}
+%%\nocite{hoischen}
+%%\renewcommand{\bibname}{References}
+%%\renewcommand{\refname}{References}
+%%\addcontentsline{toc}{chapter}{References}
+%\bibliographystyle{abbrv}
+%\bibliography{../bib}
+%}
+%\appendix
+%%%Pr\"ufdatenerfassung und -auswertung
+%\input{parts/part3}
+%%Messunsicherheit
+%\input{parts/part4}
+%%Messmethoden, -strategien, Lehrende Pr\"ufung
+%\input{parts/part5}
+%%Messmethoden, -strategien, Lehrende Pr\"ufung
+%\input{parts/part6}
+%
+
+\end{document}
