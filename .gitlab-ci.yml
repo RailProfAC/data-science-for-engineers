@@ -14,6 +14,8 @@ build:
      - pdflatex IntroPythonJupyter/Slides-IntroPythonJupyter.tex
      - pdflatex AIMethods/Handout-AIMethods.tex
      - pdflatex AIMethods/Slides-AIMethods.tex
+     - pdflatex WebApp/Handout-WebApp.tex
+     - pdflatex WebApp/Slides-WebApp.tex
   artifacts:
     paths:
        - "*.html"
