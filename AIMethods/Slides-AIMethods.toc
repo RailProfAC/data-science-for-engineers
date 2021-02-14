@@ -1,5 +1,0 @@
-\babel@toc {ngerman}{}
-\beamer@subsectionintoc {0}{1}{Unsupervised Learning (Clustering)}{3}{0}{0}
-\beamer@subsectionintoc {0}{2}{Principal Component Analysis}{16}{0}{0}
-\beamer@subsectionintoc {0}{3}{Support Vector Machines}{18}{0}{0}
-\beamer@subsectionintoc {0}{4}{Practical hints}{20}{0}{0}

@@ -1,7 +1,7 @@
 % !TEX root = ../ifvWorkshopQuality.tex
 
 \frame{\frametitle{What is machine learning?}
-\framesubtitle{ML is a field of study that gives computers the ability to learn without being explicitly programmed.}
+\lehrtext{ML is a field of study that gives computers the ability to learn without being explicitly programmed. It oftentimes sounds a bit like rocket science, however the math behind it isn't all that weird and modern software packages make it pretty accessible.}
 \begin{columns}[t] 
      \begin{column}[T]{7cm} 
      	\begin{itemize}
@@ -53,111 +53,47 @@
  \end{columns}
 }
 
-\subsection{Unsupervised Learning (Clustering)}
-%\frame{\frametitle{Machine Learning}
-%\framesubtitle{Using MIT OpenCourseware Slides}
-%Source:
-%\begin{center}
-%Eric Grimson, John Guttag, and Ana Bell. 6.0002 Introduction to Computational Thinking and Data Science. Fall 2016. Massachusetts Institute of Technology: MIT OpenCourseWare, https://ocw.mit.edu. License: Creative Commons BY-NC-SA.
-%\end{center}
-%}
-%\setbeamercolor{background canvas}{bg=}
-%%\frame{
-%\includepdf[page = 4-6]{OCW/ML.pdf}%}
-
-\frame{\frametitle{Clustering}
-\framesubtitle{Two fundamental approaches, $k$ number of clusters defined \textit{a priori}}
-\begin{columns}[t] 
-     \begin{column}[T]{7cm} 
-     \textbf{Hierarchical clustering}
-     	\begin{enumerate}
-     		\item Assign each item to one cluster
-		\item Find closest (most similar cluster): merge them
-		\item Continue until desired number of clusters $k$ is reached
-     	\end{enumerate}
-     \end{column}
-     	\begin{column}[T]{7cm} 
-         	\textbf{K-means clustering}
-     	\begin{enumerate}
-		\item Randomly choose $k$ initial centroids
-		\item While centroids don't change
-		\begin{enumerate}
-		\item[E:] Create $k$ clusters by assigning each item to closest centroid
-		\item[M:] Compute $k$ new centroids by averaging items in each cluster
-		\end{enumerate}
-     	\end{enumerate}
-     \end{column}
- \end{columns}
- 
-\begin{center}
- 	\includegraphics[width = .9\textwidth]{expectation-maximization}
-\end{center}
-}
-
-\frame{\frametitle{K-means clustering procedure}
-         	\begin{center}
-            		\only<1>{\includegraphics[width=0.7\textwidth]{PCAprocedure0}\source{}}
-			\only<2>{\includegraphics[width=0.7\textwidth]{PCAprocedure1}\source{}}
-			\only<3>{\includegraphics[width=0.7\textwidth]{PCAprocedure2}\source{}}
-			\only<4>{\includegraphics[width=0.7\textwidth]{PCAprocedure3}\source{}}
-			\only<5>{\includegraphics[width=0.7\textwidth]{PCAprocedure4}\source{}}
-			\only<6>{\includegraphics[width=0.7\textwidth]{PCAprocedure5}\source{}}
-			%\only<7>{\includegraphics[width=0.7\textwidth]{PCAprocedure6}\source{}}
-
-        		\end{center}}
-		
-\frame{\frametitle{K-means inappropriate cluster number}
-         	\begin{center}
-            		\only<1>{\includegraphics[width=0.7\textwidth]{PCAprocedureFewCluster0}\source{}}
-			\only<2>{\includegraphics[width=0.7\textwidth]{PCAprocedureFewCluster1}\source{}}
-			\only<3>{\includegraphics[width=0.7\textwidth]{PCAprocedureFewCluster2}\source{}}
-			\only<4>{\includegraphics[width=0.7\textwidth]{PCAprocedureFewCluster3}\source{}}
-			\only<5>{\includegraphics[width=0.7\textwidth]{PCAprocedureFewCluster4}\source{}}
-			\only<6>{\includegraphics[width=0.7\textwidth]{PCAprocedureFewCluster5}\source{}}
-			%\only<7>{\includegraphics[width=0.7\textwidth]{PCAprocedure6}\source{}}
-
-        		\end{center}}
 
 
 
-\subsection{Principal Component Analysis}
-%\frame{\frametitle{Principal Component Analysis (PCA)}
-%\framesubtitle{Using MIT OpenCourseware Slides}
-%Source:
-%\begin{center}
-%Philippe Rigollet. 18.650 Statistics for Applications . Fall 2016. Massachusetts Institute of Technology: MIT OpenCourseWare, https://ocw.mit.edu. License: Creative Commons BY-NC-SA.
-%\end{center}
-%}
+%\section{Principal Component Analysis}
+%%\frame{\frametitle{Principal Component Analysis (PCA)}
+%%\framesubtitle{Using MIT OpenCourseware Slides}
+%%Source:
+%%\begin{center}
+%%Philippe Rigollet. 18.650 Statistics for Applications . Fall 2016. Massachusetts Institute of Technology: MIT OpenCourseWare, https://ocw.mit.edu. License: Creative Commons BY-NC-SA.
+%%\end{center}
+%%}
+%%
+%%\setbeamercolor{background canvas}{bg=}
+%%%\frame{
+%%\includepdf[page = 2-16]{OCW/PCA.pdf}%}
 %
-%\setbeamercolor{background canvas}{bg=}
-%%\frame{
-%\includepdf[page = 2-16]{OCW/PCA.pdf}%}
-
-\frame{\frametitle{Principal Component Analysis (PCA)}
-\framesubtitle{Reduce dimensionality of data}
-\begin{columns}[t] 
-     \begin{column}[T]{7cm} 
-     	\begin{itemize}
-     		\item Sample $X_{1}, \ldots, X_{n}$ is a cloud of points in $\mathbb{R}^d$
-		\item Typically, $d$ is large
-		\item<1-> \textbf{Question:} can we project the point cloud onto a linear subspace of dimension $d' < d$ while keeping as much of the information as possible?
-		\item<2-> \textbf{Answer:} PCA achieves this by keeping important aspects of the covariance structure in orthogonal directions.
-     	\end{itemize}
-     \end{column}
-     	\begin{column}[T]{7cm} 
-         	\begin{center}
-            		\includegraphics[width=0.6\textwidth]{GaussianScatterPCA}\source{}
-        		\end{center}
-     \end{column}
- \end{columns}
-}
+%\frame{\frametitle{Principal Component Analysis (PCA)}
+%\framesubtitle{Reduce dimensionality of data}
+%\begin{columns}[t] 
+%     \begin{column}[T]{7cm} 
+%     	\begin{itemize}
+%     		\item Sample $X_{1}, \ldots, X_{n}$ is a cloud of points in $\mathbb{R}^d$
+%		\item Typically, $d$ is large
+%		\item<1-> \textbf{Question:} can we project the point cloud onto a linear subspace of dimension $d' < d$ while keeping as much of the information as possible?
+%		\item<2-> \textbf{Answer:} PCA achieves this by keeping important aspects of the covariance structure in orthogonal directions.
+%     	\end{itemize}
+%     \end{column}
+%     	\begin{column}[T]{7cm} 
+%         	\begin{center}
+%            		\includegraphics[width=0.6\textwidth]{GaussianScatterPCA}\source{}
+%        		\end{center}
+%     \end{column}
+% \end{columns}
+%}
 
 
 
-\subsection{Support Vector Machines}
-
+\section{Supervised learning}
+\lehrtext{In order to give you a starting point for your own ventures, we will dive into two methods, one from the area of supervised learning, one from the unsupervised area.}
 \frame{\frametitle{Support Vector Machine}
-\framesubtitle{Separate data into subsets according to their $nD$-coordinates.}
+\lehrtext{Support Vector Machines allow you to eeparate data into subsets according to their $nD$-coordinates and a label, e.g. OK/NOK. Since the support vector machine uses a linear algebra approach, it is pretty robust and only needs smaller datasets.}
 \begin{columns}[t] 
      \begin{column}[T]{7cm} 
      	\begin{itemize}
@@ -165,7 +101,7 @@
 		\begin{itemize}
 		\item Find separating hyperplane maximising the distance between borderline instances
 		\item For data mixed in feature space, slack parameter (and penalty $C$) is used
-		\item If no separating hyperplane can be found in feature space, dimension is increased ``Kernel trick''
+		\item If no separating hyperplane can be found in feature space, dimension is increased: ``Kernel trick''
 		\end{itemize}
      		\item Robust:
 		\begin{itemize}
@@ -336,12 +272,110 @@
  \end{columns}
 }
 
+\newpage
 %\subsection{Further Outlook}
 
+\section{Unsupervised Learning}
+\lehrtext{As opposed to supervised learning, the unsupervised algorithms detect patterns in the data on their own. This is very useful especially for higher dimensional cases, where the human eye does not detect them easily.}
+%\frame{\frametitle{Machine Learning}
+%\framesubtitle{Using MIT OpenCourseware Slides}
+%Source:
+%\begin{center}
+%Eric Grimson, John Guttag, and Ana Bell. 6.0002 Introduction to Computational Thinking and Data Science. Fall 2016. Massachusetts Institute of Technology: MIT OpenCourseWare, https://ocw.mit.edu. License: Creative Commons BY-NC-SA.
+%\end{center}
+%}
+%\setbeamercolor{background canvas}{bg=}
+%%\frame{
+%\includepdf[page = 4-6]{OCW/ML.pdf}%}
 
-\subsection{Practical hints}
+\frame{\frametitle{Clustering}
+\lehrtext{For clustering, two fundamental approaches exist:
+	\begin{itemize}
+		\item Similarity based
+		\item Distance based
+	\end{itemize}
+For both types, the number of clusters $k$ needs to be defined \textit{a priori}.}
+\begin{columns}[t] 
+     \begin{column}[T]{7cm} 
+     \textbf{Hierarchical clustering}
+     	\begin{enumerate}
+     		\item Assign each item to one cluster
+		\item Find closest (most similar cluster): merge them
+		\item Continue until desired number of clusters $k$ is reached
+     	\end{enumerate}
+     \end{column}
+     	\begin{column}[T]{7cm} 
+         	\textbf{K-means clustering}
+     	\begin{enumerate}
+		\item Randomly choose $k$ initial centroids
+		\item While centroids don't change
+		\begin{enumerate}
+		\item[E:] Create $k$ clusters by assigning each item to closest centroid
+		\item[M:] Compute $k$ new centroids by averaging items in each cluster
+		\end{enumerate}
+     	\end{enumerate}
+     \end{column}
+ \end{columns}
+ 
+\begin{center}
+ 	\includegraphics[width = 12cm]{expectation-maximization}
+\end{center}
+}
+
+\newpage
+\frame{\frametitle{K-means clustering procedure}
+\lehrtext{The images below depict an average clustering situation, with appropriate number of clusters and sufficiently random initialisation.}
+         	\begin{center}
+		\begin{tikzpicture}
+            		\node at (0,0) {\includegraphics[width=4.9cm]{PCAprocedure0}};
+			\node at (4,0) {\includegraphics[width=4.9cm]{PCAprocedure1}};
+			\node at (8,0) {\includegraphics[width=4.9cm]{PCAprocedure2}};
+			\node at (0,-3.5) {\includegraphics[width=4.9cm]{PCAprocedure3}};
+			\node at (4,-3.5) {\includegraphics[width=4.9cm]{PCAprocedure4}};
+			\node at (8,-3.5) {\includegraphics[width=4.9cm]{PCAprocedure5}};
+			%\only<7>{\includegraphics[width=4.9cm]{PCAprocedure6}};
+		\end{tikzpicture}
+        		\end{center}}
+		
+\frame{\frametitle{K-means inappropriate cluster number}
+\lehrtext{In case an inappropriate number of clusters is selected, the algorithms obviously cannot converge to an optimum solution. The example below shows such a case.}
+         	\begin{center}
+		\begin{tikzpicture}
+             		\node at (0,0) {\includegraphics[width=4.9cm]{PCAprocedureFewCluster0}};
+			\node at (4,0) {\includegraphics[width=4.9cm]{PCAprocedureFewCluster1}};
+			\node at (8,0) {\includegraphics[width=4.9cm]{PCAprocedureFewCluster2}};
+			\node at (0,-3.5) {\includegraphics[width=4.9cm]{PCAprocedureFewCluster3}};
+			\node at (4,-3.5) {\includegraphics[width=4.9cm]{PCAprocedureFewCluster4}};
+			\node at (8,-3.5) {\includegraphics[width=4.9cm]{PCAprocedureFewCluster5}};
+			%\only<7>{\includegraphics[width=4.9cm]{PCAprocedure6}};
+		\end{tikzpicture}
+        		\end{center}}
+
+\newpage
+\frame{\frametitle{K-means suboptimal initialisation}
+\lehrtext{In case of suboptimal initialisation, the converge of the algorithm is slower or cannot be guaranteed at all, as illustrated below.}
+         	\begin{center}
+		\begin{tikzpicture}
+             		\node at (0,0) {\includegraphics[width=3cm]{PCAprocedureBadInit0}};
+			\node at (3,0) {\includegraphics[width=3cm]{PCAprocedureBadInit1}};
+			\node at (6,0) {\includegraphics[width=3cm]{PCAprocedureBadInit2}};
+			\node at (9,0) {\includegraphics[width=3cm]{PCAprocedureBadInit3}};
+			\node at (0,-2.5) {\includegraphics[width=3cm]{PCAprocedureBadInit4}};
+			\node at (3,-2.5) {\includegraphics[width=3cm]{PCAprocedureBadInit5}};
+			\node at (6,-2.5) {\includegraphics[width=3cm]{PCAprocedureBadInit6}};
+			\node at (9,-2.5) {\includegraphics[width=3cm]{PCAprocedureBadInit7}};
+			\node at (0,-5) {\includegraphics[width=3cm]{PCAprocedureBadInit8}};
+			\node at (3,-5) {\includegraphics[width=3cm]{PCAprocedureBadInit9}};
+			\node at (6,-5) {\includegraphics[width=3cm]{PCAprocedureBadInit10}};
+			\node at (9,-5) {\includegraphics[width=3cm]{PCAprocedureBadInit11}};
+			\end{tikzpicture}
+        		\end{center}}
+
+\newpage
+
+\section{Practical hints}
 \frame{\frametitle{Practical hints for application of data science methods}
-\framesubtitle{}
+\lehrtext{Try to keep these in mind when approaching a dataset.}
 \begin{columns}[t] 
      \begin{column}[T]{6cm} 
      	\begin{itemize}
@@ -376,10 +410,10 @@
  \end{columns}
 }
 
-\frame{\frametitle{Get to work!}
-\framesubtitle{Load and try \texttt{2-SVM-and-KMeans.ipynb} }
-\begin{center}
-\includegraphics[width = .3\textwidth]{Wagenmeister.png}
-\end{center}
-}
+%\frame{\frametitle{Get to work!}
+%\framesubtitle{Load and try \texttt{2-SVM-and-KMeans.ipynb} }
+%\begin{center}
+%\includegraphics[width = .3\textwidth]{Wagenmeister.png}
+%\end{center}
+%}
 

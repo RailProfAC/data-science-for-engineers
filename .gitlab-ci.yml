@@ -12,6 +12,8 @@ build:
      - pdflatex IntroDataScience/Slides-IntroDataScience.tex
      - pdflatex IntroPythonJupyter/Handout-IntroPythonJupyter.tex
      - pdflatex IntroPythonJupyter/Slides-IntroPythonJupyter.tex
+     - pdflatex AIMethods/Handout-AIMethods.tex
+     - pdflatex AIMethods/Slides-AIMethods.tex
   artifacts:
     paths:
        - "*.html"

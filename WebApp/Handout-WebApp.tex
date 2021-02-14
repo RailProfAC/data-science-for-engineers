@@ -1,0 +1,121 @@
+\documentclass[11pt,a4paper, d]{scrartcl}
+\usepackage{beamerarticle}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage[round]{natbib}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage[scaled]{helvet}
+\usepackage{amssymb}
+\usepackage{multirow}
+\usepackage{textcomp}
+\usepackage{graphicx}
+\usepackage{paralist}
+\usepackage{textcomp}
+\usepackage{pdflscape} 
+\usepackage{marvosym}
+\usepackage{pict2e}
+\usepackage{float}
+\usepackage{siunitx}
+\usepackage[siunitx,european,cuteinductors,smartlabels]{circuitikz}
+\usepackage{fancyhdr}
+\usepackage{pgfplots}
+\usepackage{sansmath}
+\usetikzlibrary{shapes.geometric}
+\usepackage{wasysym}
+\usepackage{pdfpages}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{thmtools}
+%\usepackage{colorbrewer}
+\usepackage{tabto,stackengine}
+\usepgfplotslibrary{colorbrewer}
+\usepgfplotslibrary{fillbetween}
+\usetikzlibrary{graphs, automata, spy, positioning}
+\usetikzlibrary{mindmap}
+\usetikzlibrary{arrows}
+\usepackage{subfig}
+\usepackage{listings}
+%\usepackage{ulem}
+
+\usetikzlibrary{calc}
+
+\graphicspath{{figures/}}
+%\graphicspath{{../../figures/}}
+
+\theoremstyle{definition}
+%\declaretheorem{aufgabe}
+\newtheorem{aufgabe}{Aufgabe}
+%\definecolor{mint}{rgb}{32,178,170}
+\DeclareMathOperator{\sign}{sgn}
+
+\newcommand\MyBox[2]{
+  \fbox{\lower0.75cm
+    \vbox to 1.7cm{\vfil
+      \hbox to 1.7cm{\hfil\parbox{1.4cm}{#1\\#2}\hfil}
+      \vfil}%
+  }%
+}
+
+\pgfmathdeclarefunction{norm}{3}{%
+                      \pgfmathparse{sqrt(0.5*#3/pi)*exp(-0.5*#3*(#1-#2)^2)}%
+                    }
+
+
+\renewcommand*\familydefault{\sfdefault}
+\renewcommand{\arraystretch}{1.1}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\begin{picture}(0,0)(0,0)\put(53,-62){\includegraphics[height=4cm]{logoR}}\end{picture}}
+\lhead{Handout - Introduction to Data Science}
+\lfoot{File: \jobname, date: \today}
+\rfoot{Page \thepage}
+
+\author{Prof. Dr. Raphael Pfaff\\Lehrgebiet Schienenfahrzeugtechnik
+\begin{picture}(0,0)(0,0)\put(158,390){\includegraphics[height=4cm]{logoR}}\end{picture}}
+\title{Rail Data Science}
+\subtitle{Handout - Deployment to a WebApp}
+%\date{}
+
+
+\begin{document}
+\definecolor{mDarkBrown}{HTML}{604c38}
+\definecolor{mDarkTeal}{HTML}{23373b}
+\definecolor{mLightBrown}{HTML}{EB811B}
+\definecolor{mLightGreen}{HTML}{14B03D}
+\definecolor{mint}{RGB}{0,178,169}
+\newcommand{\barP}{\, \mathrm{bar}}
+\newcommand{\source}[1]{\rotatebox{90}{\tiny \color{gray} #1}}
+\newcommand{\lehrtext}[1]{
+\only<article>{
+\vspace{0.3cm}
+\leavevmode%
+  \tabto*{-1.8cm}% LEFT MARGIN
+  %\tabto*{\dimexpr\linewidth+40pt\relax}% RIGHT MARGIN
+  \smash{\belowbaseline[-\ht\strutbox]{\makebox[0pt]%
+%    [r]% LEFT MARGIN
+    [l]% RIGHT MARGIN
+  {\includegraphics[width = 1.5cm]{teacher}}}}%
+  \tabto*{\TabPrevPos}%
+#1
+}
+}
+
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\mum}{\operatorname{\mu m}}
+\newcommand{\E}{\operatorname{E}}
+
+\newcounter{exercise}
+\newcommand*\theex{\stepcounter{exercise}\arabic{exercise}}
+
+%\thispagestyle{fancy}
+\maketitle
+\input{WebApp}
+\appendix
+\section{chart.html}
+\lstinputlisting[language=HTML]{App/templates/chart.html}
+\end{document}
