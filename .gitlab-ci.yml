@@ -16,6 +16,7 @@ build:
      - pdflatex AIMethods/Slides-AIMethods.tex
      - pdflatex WebApp/Handout-WebApp.tex
      - pdflatex WebApp/Slides-WebApp.tex
+     - pdflatex Numerics/Handout-Numerics.tex
   artifacts:
     paths:
        - "*.html"
