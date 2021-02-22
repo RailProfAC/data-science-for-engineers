@@ -17,6 +17,15 @@ build:
      - pdflatex WebApp/Handout-WebApp.tex
      - pdflatex WebApp/Slides-WebApp.tex
      - pdflatex Numerics/Handout-Numerics.tex
+     - pdflatex TextProcessing/Handout-TextProcessing.tex
+     - pdflatex RareEvent/Handout-RareEvent.tex
+     - pdflatex ObjectDetection/Handout-ObjectDetection.tex
+     - pdflatex MonteCarlo/Handout-MonteCarlo.tex
+     - pdflatex ImageProcessing/Handout-ImageProcessing.tex
+     - pdflatex Exploration/Handout-Exploration.tex
+     - pdflatex DynamicalSystems/Handout-DynamicalSystems.tex
+     - pdflatex Datastructures/Handout-Datastructures.tex
+     - pdflatex Datastructures/Handout-Pandas.tex
   artifacts:
     paths:
        - "*.html"
