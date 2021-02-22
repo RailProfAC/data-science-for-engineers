@@ -17,7 +17,7 @@ build:
      - pdflatex WebApp/Handout-WebApp.tex
      - pdflatex WebApp/Slides-WebApp.tex
      - pdflatex Numerics/Handout-Numerics.tex
-     - pdflatex TextProcessing/Handout-TextProcessing.tex
+     - pdflatex Textprocessing/Handout-TextProcessing.tex
      - pdflatex RareEvent/Handout-RareEvent.tex
      - pdflatex ObjectDetection/Handout-ObjectDetection.tex
      - pdflatex MonteCarlo/Handout-MonteCarlo.tex
