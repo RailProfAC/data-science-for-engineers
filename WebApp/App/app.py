@@ -102,6 +102,28 @@ def geo():
     except Exception as e:
         estr = repr(e)
         return render_template('404.html', ecode=estr), 404
+    
+@app.route("/hist")
+def hist():
+    try:
+        global df
+        data = go.Histogram(
+            x = 3.6*df['z']
+        )
+        layout = dict(
+            title = 'Test Drive Velocity Distribution v/(km/h)',
+        )
+
+        fig = dict(data=data, layout=layout)
+        
+        plotcode = po.plot(fig, #include_plotlyjs=False,
+        output_type='div',
+        validate = True, show_link=False)
+        return render_template('chart.html', plotcode=plotcode)
+    except Exception as e:
+        print(e)
+        estr = repr(e)
+        return render_template('404.html'), 404
 
 app.run(debug = True, host='0.0.0.0')
 
