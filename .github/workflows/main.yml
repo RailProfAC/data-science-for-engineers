@@ -10,21 +10,7 @@ jobs:
         uses: xu-cheng/latex-action@v2
         with:
           root_file: |
-            IntroDataScience/Handout-IntroDataScience.tex
             IntroDataScience/Slides-IntroDataScience.tex
-            IntroPythonJupyter/Handout-IntroPythonJupyter.tex
             IntroPythonJupyter/Slides-IntroPythonJupyter.tex
-            AIMethods/Handout-AIMethods.tex
             AIMethods/Slides-AIMethods.tex
-            WebApp/Handout-WebApp.tex
             WebApp/Slides-WebApp.tex
-            Numerics/Handout-Numerics.tex
-            Textprocessing/Handout-TextProcessing.tex
-            RareEvent/Handout-RareEvent.tex
-            ObjectDetection/Handout-ObjectDetection.tex
-            MonteCarlo/Handout-MonteCarlo.tex
-            ImageProcessing/Handout-ImageProcessing.tex
-            Exploration/Handout-Exploration.tex
-            DynamicalSystems/Handout-DynamicalSystems.tex
-            Datastructures/Handout-Datastructures.tex
-            Datastructures/Handout-Pandas.tex
