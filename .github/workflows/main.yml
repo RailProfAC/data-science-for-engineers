@@ -14,3 +14,11 @@ jobs:
             IntroPythonJupyter/Slides-IntroPythonJupyter.tex
             AIMethods/Slides-AIMethods.tex
             WebApp/Slides-WebApp.tex
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+             IntroDataScience/Slides-IntroDataScience.pdf
+             IntroPythonJupyter/Slides-IntroPythonJupyter.pdf
+             AIMethods/Slides-AIMethods.pdf
+             WebApp/Slides-WebApp.pdf
