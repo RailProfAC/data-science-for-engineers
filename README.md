@@ -1,3 +1,3 @@
-# ifv Rail Data Science
+# Data Science for Engineers
 
-Repository für Rail Data Science 
+From a classic engineer to a data-savvy engineer in three days!
